@@ -20,12 +20,9 @@ function Book() {
   // the constructor...
 }
 
-function addBookToLibrary() {
-  return myLibrary.push(e);
+function addBookToLibrary(bookObject) {
+  return myLibrary.push(bookObject);
 }
 
 function displayBook(array) {
 }
-
-
-displayBook(myLibrary);
