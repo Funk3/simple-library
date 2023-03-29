@@ -39,4 +39,14 @@ function displayBook(array) {
   }
 }
 
+
+function test(test) {
+  const bookList = document.querySelector('#bookList')
+  const newElement = document.createElement("li")
+  const text = document.createTextNode(test)
+  newElement.appendChild(text)
+  bookList.appendChild(newElement)
+}
+
+test("hi!")
 displayBook(myLibrary)
