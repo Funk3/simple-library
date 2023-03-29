@@ -16,13 +16,27 @@ let myLibrary = [
   }
 ];
 
-function Book() {
-  // the constructor...
+class Book {
+  constructor(title, author, status) {
+    this.title = title;
+    this.author = author;
+    this.status = status;
+  }
 }
 
 function addBookToLibrary(bookObject) {
   return myLibrary.push(bookObject);
 }
 
+
+//loop through array
+//push object into document
+//add document to dom
 function displayBook(array) {
+  for (let book of array) {
+    console.log("book", book)
+
+  }
 }
+
+displayBook(myLibrary)
