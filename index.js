@@ -28,25 +28,27 @@ function addBookToLibrary(bookObject) {
   return myLibrary.push(bookObject);
 }
 
-
+const bookList = document.querySelector('.bookList')
+const newElement = document.createElement("li")
 //loop through array
+// add each part of object to an element
+// -create element
+// -push item on to it
+// -
 //push object into document
 //add document to dom
 function displayBook(array) {
   for (let book of array) {
-    console.log("book", book)
+    const title = document.createTextNode(book.title)
+    const author = document.createTextNode(book.author)
+    const status = document.createTextNode(book.status)
 
+    newElement.appendChild(title)
+    newElement.appendChild(author)
+    newElement.appendChild(status)
+    bookList.appendChild(newElement)
   }
 }
 
 
-function test(test) {
-  const bookList = document.querySelector('#bookList')
-  const newElement = document.createElement("li")
-  const text = document.createTextNode(test)
-  newElement.appendChild(text)
-  bookList.appendChild(newElement)
-}
-
-test("hi!")
 displayBook(myLibrary)
